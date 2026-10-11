@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "verifypulse",
+  "title": "VerifyPulse Email Deliverability & DNS Security MCP",
+  "description": "Real-time email verification, live DNS MX lookup, RFC 7208 SPF 10-lookup limits, and DMARC policy auditing for AI agents.",
+  "version": "1.0.0",
+  "author": "MohDev212",
+  "homepage": "https://verifypulse-seven.vercel.app",
+  "repository": "https://github.com/MohDev212/verifypulse-mcp",
+  "transport": {
+    "type": "http",
+    "url": "https://verifypulse-seven.vercel.app/mcp"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "verify_email",
+        "description": "Verifies an email address using RFC 5322 syntax validation, live MX queries, disposable domain blocklists, and SMTP checks.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "description": "The target email address to verify"
+            }
+          },
+          "required": ["email"]
+        }
+      },
+      {
+        "name": "inspect_dns",
+        "description": "Audits a domain for active MX servers, RFC 7208 SPF lookup counts (detects >10 hard limits), and DMARC alignment.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "domain": {
+              "type": "string",
+              "description": "The domain name to inspect"
+            }
+          },
+          "required": ["domain"]
+        }
+      }
+    ]
+  }
+}
