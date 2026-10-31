@@ -65,9 +65,9 @@ Connect any MCP client that supports remote servers:
 |---|---|---|
 | `GET /v1/x402/credits?pack=1000` | $1.00 | 1,000 credits |
 | `GET /v1/x402/credits?pack=5000` | $5.00 | 5,000 credits |
-| `GET /v1/x402/guard-pass?plan=guard_starter` | $2.00 | 30 days, 50 domains |
-| `GET /v1/x402/guard-pass?plan=guard_agency` | $5.00 | 30 days, 300 domains |
-| `GET /v1/x402/guard-pass?plan=guard_scale` | $12.00 | 30 days, 1,500 domains |
+| `GET /v1/x402/guard-pass?plan=guard_starter` | $5.00 | 30 days, 50 domains |
+| `GET /v1/x402/guard-pass?plan=guard_agency` | $15.00 | 30 days, 300 domains |
+| `GET /v1/x402/guard-pass?plan=guard_scale` | $39.00 | 30 days, 1,500 domains |
 
 Current prices are always in the [OpenAPI document](https://verifypulse-seven.vercel.app/openapi.json) and [pricing.json](https://verifypulse-seven.vercel.app/pricing.json).
 
